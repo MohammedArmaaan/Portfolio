@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohammed Armaan - Full Stack Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -11,16 +11,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+        rel="stylesheet">
     <link rel="stylesheet" href="/portfolio.css">
 </head>
 
 <body class="bg-gray-50">
     <!-- Loading Screen -->
     <div class="loading-screen" id="loading-screen">
-        <div class="loading-text">Mohammed Armaan</div>
+        <div class="loading-text"></div>
+        <!-- <div class="loading-text">Mohammed Armaan</div> -->
     </div>
-    
+
     <!-- Scroll Progress Indicator -->
     <div class="scroll-indicator">
         <div class="scroll-progress" id="scroll-progress"></div>
@@ -39,24 +40,24 @@
                     <a href="#experience" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Experience</a>
                     <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Contact</a>
                     <button id="dark-mode-toggle"
-                    class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors">
-                    <i class="fas fa-moon text-gray-700"></i>
-                </button>
+                        class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors">
+                        <i class="fas fa-moon text-gray-700"></i>
+                    </button>
+                </div>
+                <div class="flex items-center space-x-4 md:hidden">
+                    <button id="dark-mode-toggle-mobile"
+                        class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors">
+                        <i class="fas fa-moon text-gray-700"></i>
+                    </button>
+                    <button id="mobile-menu-btn">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
             </div>
-            <div class="flex items-center space-x-4 md:hidden">
-                <button id="dark-mode-toggle-mobile"
-                class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors">
-                <i class="fas fa-moon text-gray-700"></i>
-            </button>
-            <button id="mobile-menu-btn">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
         </div>
-    </div>
-</div>
-</nav>
+    </nav>
 
-<!-- Hero Section -->
+    <!-- Hero Section -->
     <section id="home" class="hero-section min-h-screen flex items-center justify-center text-white relative">
         <!-- Simple Background Elements -->
         <div class="geometric-bg">
@@ -388,8 +389,9 @@
                     <div class="p-8">
                         <h3 class="text-2xl font-bold mb-4 gradient-text">E-Commerce Platform</h3>
                         <p class="text-gray-600 mb-6 leading-relaxed">
-                            Full-stack e-commerce solution with advanced features including real-time inventory,
-                            payment processing, and comprehensive admin dashboard.
+                            Full-stack e-commerce solution with advanced features including real-time Inquery For
+                            aParticular Product,
+                            and comprehensive Admin Pannel.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
                             <span
@@ -400,16 +402,10 @@
                                 class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">MySQL</span>
                         </div>
                         <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                            <button
-                                class="text-blue-600 hover:text-blue-800 font-semibold transition-colors text-center sm:text-left"
-                                onclick="alert('Demo link would open here')">
-                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
-                            </button>
-                            <button
-                                class="text-gray-600 hover:text-gray-800 font-semibold transition-colors text-center sm:text-left"
-                                onclick="alert('GitHub repository would open here')">
+                            <a href="https://github.com/MohammedArmaaan/Auto-Parts"
+                                class="github-link inline-flex items-center px-4 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-700 hover:text-gray-900 font-medium transition-colors">
                                 <i class="fab fa-github mr-2"></i>Source Code
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -421,30 +417,25 @@
                         <i class="fas fa-chart-line text-6xl text-white"></i>
                     </div>
                     <div class="p-8">
-                        <h3 class="text-2xl font-bold mb-4 gradient-text">Analytics Dashboard</h3>
+                        <h3 class="text-2xl font-bold mb-4 gradient-text">Task Manager</h3>
                         <p class="text-gray-600 mb-6 leading-relaxed">
-                            Real-time analytics platform with interactive visualizations,
-                            custom reporting, and advanced data processing capabilities.
+                            Real-time Task CRUD platform with interactive visualizations,
+                            and Attdeence System at Particular Location using GeoLocation Google API.
+                            Also have checkIn checkOut Funcnality to count Daily Total Working Time.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
                             <span
-                                class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Django</span>
+                                class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Laravel</span>
                             <span
-                                class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">React</span>
+                                class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">PHP</span>
                             <span
-                                class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">PostgreSQL</span>
+                                class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">MySQL</span>
                         </div>
                         <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                            <button
-                                class="text-blue-600 hover:text-blue-800 font-semibold transition-colors text-center sm:text-left"
-                                onclick="alert('Demo link would open here')">
-                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
-                            </button>
-                            <button
-                                class="text-gray-600 hover:text-gray-800 font-semibold transition-colors text-center sm:text-left"
-                                onclick="alert('GitHub repository would open here')">
+                            <a href="https://github.com/MohammedArmaaan/Task-Management" target="_blank"
+                                class="github-link inline-flex items-center px-4 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-700 hover:text-gray-900 font-medium transition-colors">
                                 <i class="fab fa-github mr-2"></i>Source Code
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -456,33 +447,28 @@
                         <i class="fas fa-mobile-alt text-6xl text-white"></i>
                     </div>
                     <div class="p-8">
-                        <h3 class="text-2xl font-bold mb-4 gradient-text">Task Management API</h3>
+                        <h3 class="text-2xl font-bold mb-4 gradient-text">Job Portal</h3>
                         <p class="text-gray-600 mb-6 leading-relaxed">
-                            RESTful API with JWT authentication, real-time notifications,
-                            and comprehensive team collaboration features.
+                            A Job Portal Web-Site and Web-Applictation with full fetures to find Job's easily,
+                            and also have feature to upload Resume and apply for job's easily.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
+                            <!-- <span
+                                class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Flask</span> -->
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Core
+                                PHP</span>
                             <span
-                                class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Flask</span>
-                            <span
-                                class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Python</span>
-                            <span
-                                class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">MongoDB</span>
+                                class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">MySQL</span>
                         </div>
                         <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                            <button
-                                class="text-blue-600 hover:text-blue-800 font-semibold transition-colors text-center sm:text-left"
-                                onclick="alert('Demo link would open here')">
-                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
-                            </button>
-                            <button
-                                class="text-gray-600 hover:text-gray-800 font-semibold transition-colors text-center sm:text-left"
-                                onclick="alert('GitHub repository would open here')">
+                            <a href="https://github.com/MohammedArmaaan/Job-Portal" target="_blank"
+                                class="github-link inline-flex items-center px-4 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-700 hover:text-gray-900 font-medium transition-colors">
                                 <i class="fab fa-github mr-2"></i>Source Code
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
+
                 <!-- Project 4 -->
                 <div class="project-card">
                     <div
@@ -490,10 +476,11 @@
                         <i class="fas fa-shopping-cart text-6xl text-white"></i>
                     </div>
                     <div class="p-8">
-                        <h3 class="text-2xl font-bold mb-4 gradient-text">E-Commerce Platform</h3>
+                        <h3 class="text-2xl font-bold mb-4 gradient-text">Job Portal Admin</h3>
                         <p class="text-gray-600 mb-6 leading-relaxed">
-                            Full-stack e-commerce solution with advanced features including real-time inventory,
-                            payment processing, and comprehensive admin dashboard.
+                            A Job Portal Admin Pannel with full fetures to manage Job's and User's
+                            easily, and also have feature to Update User Status (Active|Inactive)
+                            and Check or Track the Job application's.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
                             <span
@@ -504,19 +491,19 @@
                                 class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">MySQL</span>
                         </div>
                         <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                            <button
-                                class="text-blue-600 hover:text-blue-800 font-semibold transition-colors text-center sm:text-left"
-                                onclick="alert('Demo link would open here')">
-                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
-                            </button>
-                            <button
-                                class="text-gray-600 hover:text-gray-800 font-semibold transition-colors text-center sm:text-left"
-                                onclick="alert('GitHub repository would open here')">
+                            <a href="https://github.com/MohammedArmaaan/Admin-Job-Portal" target="_blank"
+                                class="github-link inline-flex items-center px-4 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-700 hover:text-gray-900 font-medium transition-colors">
                                 <i class="fab fa-github mr-2"></i>Source Code
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
+                <!-- <div class="flex justify-center ml-200 mt-10">
+                    <a href="https://github.com/MohammedArmaaan" target="_blank"
+                        class="inline-flex items-center px-6 py-3 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-700 hover:text-gray-900 font-medium transition-colors">
+                        <i class="fab fa-github mr-2"></i>View All Projects
+                    </a>
+                </div> -->
             </div>
         </div>
     </section>
@@ -536,24 +523,24 @@
                         <div class="glass-card p-8 hover-lift">
                             <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                                 <div>
-                                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Senior Full Stack Developer</h3>
-                                    <p class="text-xl gradient-text font-semibold">TechCorp Solutions</p>
+                                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Internship</h3>
+                                    <p class="text-xl gradient-text font-semibold">SNM Tech Craft Innovation</p>
                                 </div>
-                                <span class="text-gray-500 font-medium mt-2 md:mt-0">2021 - Present</span>
+                                <span class="text-gray-500 font-medium mt-2 md:mt-0">2024 - 2025</span>
                             </div>
                             <p class="text-gray-600 mb-6 leading-relaxed text-lg">
-                                Leading development of enterprise-scale applications, mentoring junior developers,
-                                and implementing best practices that improved system performance by 40%.
+                                Started Internship at SNM Tech Craft Innovation to work on live Projects.
+                                Created Responsive and Featured Projects.
                             </p>
                             <div class="flex flex-wrap gap-2">
                                 <span
                                     class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Laravel</span>
                                 <span
-                                    class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">React</span>
+                                    class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Flask</span>
                                 <span
-                                    class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">AWS</span>
+                                    class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Django</span>
                                 <span
-                                    class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">Docker</span>
+                                    class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">Tailwind</span>
                             </div>
                         </div>
                     </div>
@@ -563,24 +550,26 @@
                         <div class="glass-card p-8 hover-lift">
                             <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                                 <div>
-                                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Full Stack Developer</h3>
-                                    <p class="text-xl gradient-text font-semibold">Digital Innovations Inc.</p>
+                                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Backend Developer</h3>
+                                    <p class="text-xl gradient-text font-semibold">Started Backend Learning</p>
                                 </div>
-                                <span class="text-gray-500 font-medium mt-2 md:mt-0">2019 - 2021</span>
+                                <span class="text-gray-500 font-medium mt-2 md:mt-0">2023 - 2024</span>
                             </div>
                             <p class="text-gray-600 mb-6 leading-relaxed text-lg">
-                                Developed and maintained multiple client projects, implemented CI/CD pipelines,
-                                and reduced application load times by 35% through optimization.
+                                Started Learning Java,Python,PHP Backend Language and Databases 
+                                Orecal,SQL,MySQL,PLSQL at Shreyarth University.
                             </p>
                             <div class="flex flex-wrap gap-2">
                                 <span
                                     class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">PHP</span>
                                 <span
-                                    class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Vue.js</span>
+                                    class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Java</span>
                                 <span
-                                    class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">MySQL</span>
+                                    class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Python</span>
                                 <span
-                                    class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">Redis</span>
+                                    class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">MySQL</span>
+                                <span
+                                    class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">SQL</span>
                             </div>
                         </div>
                     </div>
@@ -590,24 +579,24 @@
                         <div class="glass-card p-8 hover-lift">
                             <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                                 <div>
-                                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Junior Web Developer</h3>
-                                    <p class="text-xl gradient-text font-semibold">StartUp Hub</p>
+                                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Web Developer</h3>
+                                    <p class="text-xl gradient-text font-semibold">Started Web Designing</p>
                                 </div>
-                                <span class="text-gray-500 font-medium mt-2 md:mt-0">2018 - 2019</span>
+                                <span class="text-gray-500 font-medium mt-2 md:mt-0">2022 - 2023</span>
                             </div>
                             <p class="text-gray-600 mb-6 leading-relaxed text-lg">
-                                Started my professional journey building responsive websites and learning
-                                modern development practices in an agile environment.
+                                Started my journey building responsive websites and learning
+                                modern development practices in My collage Shreyarth University.
                             </p>
                             <div class="flex flex-wrap gap-2">
                                 <span
                                     class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
                                 <span
-                                    class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">HTML/CSS</span>
+                                    class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">HTML</span>
                                 <span
-                                    class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">PHP</span>
+                                    class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">CSS</span>
                                 <span
-                                    class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">Git</span>
+                                    class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">Bootstrap</span>
                             </div>
                         </div>
                     </div>
@@ -821,4 +810,5 @@
 
     <script src="./script.js"></script>
 </body>
+
 </html>
