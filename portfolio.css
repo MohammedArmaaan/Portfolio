@@ -9,6 +9,52 @@
             overflow-x: hidden;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
+        /* Hamburger icon styles */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile menu styles */
+#mobile-menu {
+    position: fixed;
+    top: 80px; /* Adjust based on your header height */
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+}
+
+.dark #mobile-menu {
+    background: #1a202c; /* Dark mode background */
+}
 
         /* Dark Mode Styles */
         .dark {
@@ -583,15 +629,236 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .floating-shape {
-                display: none;
-            }
+    body {
+        font-size: 90%;
+    }
 
-            .hero-section h1 {
-                font-size: 3rem;
-            }
+    .hero-section h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
 
-            .hero-section p {
-                font-size: 1.1rem;
-            }
-        }
+    .hero-section p {
+        font-size: 1rem;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .icon-container {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    .project-card {
+        margin: 1rem auto;
+        width: 90%;
+    }
+
+    .timeline-item {
+        padding-left: 20px;
+    }
+
+    .form-input {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+
+    .scroll-indicator {
+        height: 3px;
+    }
+}
+
+
+/* Add these to your existing CSS */
+
+@media (max-width: 768px) {
+    /* Timeline specific mobile styles */
+    .timeline-item {
+        padding-left: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .timeline-item::before {
+        width: 12px;
+        height: 12px;
+        left: 0;
+    }
+    
+    .timeline-item::after {
+        left: 5px;
+        top: 12px;
+    }
+    
+    .glass-card {
+        padding: 1.5rem;
+    }
+    
+    /* Disable the alternating animation on mobile */
+    .timeline-item {
+        transform: none !important;
+        opacity: 1 !important;
+    }
+    
+    /* Adjust the experience section layout */
+    #experience .max-w-4xl {
+        padding: 0 1rem;
+    }
+    
+    /* Make sure timeline items don't overflow */
+    .timeline-item .glass-card {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    /* Stack the date and title on mobile */
+    .timeline-item .flex-col.md\:flex-row {
+        flex-direction: column;
+    }
+    
+    .timeline-item .text-gray-500 {
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    .timeline-item {
+        padding-left: 15px;
+    }
+    
+    .glass-card {
+        padding: 1rem;
+    }
+    
+    .timeline-item h3 {
+        font-size: 1.25rem;
+    }
+    
+    .timeline-item p.text-lg {
+        font-size: 1rem;
+    }
+}
+/* Add this to your existing CSS */
+
+/* Timeline Base Styles */
+.timeline {
+  position: relative;
+  max-width: 100%;
+  padding: 0 1rem;
+  overflow: hidden;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(135deg, #ff6b6b, #4834d4);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.2);
+  z-index: 1;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 16px;
+  width: 2px;
+  height: calc(100% + 24px);
+  background: linear-gradient(180deg, #ff6b6b, transparent);
+}
+
+.timeline-item:last-child::after {
+  display: none;
+}
+
+.timeline-item .glass-card {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .timeline {
+    padding: 0 0.5rem;
+  }
+  
+  .timeline-item {
+    padding-left: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .timeline-item::before {
+    width: 14px;
+    height: 14px;
+    left: 0;
+  }
+  
+  .timeline-item::after {
+    left: 6px;
+    top: 14px;
+  }
+  
+  .timeline-item .glass-card {
+    padding: 1.25rem;
+  }
+  
+  /* Completely disable animations for timeline on mobile */
+  .timeline-item {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+  
+  /* Stack the date and title on mobile */
+  .timeline-item .flex-col.md\:flex-row {
+    flex-direction: column;
+  }
+  
+  .timeline-item .text-gray-500 {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-item {
+    padding-left: 25px;
+  }
+  
+  .timeline-item::before {
+    width: 12px;
+    height: 12px;
+  }
+  
+  .timeline-item .glass-card {
+    padding: 1rem;
+  }
+  
+  .timeline-item h3 {
+    font-size: 1.25rem;
+  }
+  
+  .timeline-item p.text-lg {
+    font-size: 0.9375rem;
+  }
+}
