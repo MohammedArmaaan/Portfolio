@@ -357,8 +357,8 @@ document.addEventListener('click', (e) => {
 // Typing Effect
 function initTypingEffect() {
     const texts = [
-        'Full Stack Developer',
-        'PHP Developer',
+        'Full Stack Laravel Developer',
+        'PHP Laravel Backend Developer',
         'Web Developer',
         'Python Developer'
     ];
